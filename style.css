@@ -61,9 +61,20 @@ body {
   height: 500px;
   object-fit: cover;
 }
+/* Hero Carousel - Smooth Fade Transition */
 .carousel-item {
-  transition: opacity 1s ease-in-out; /* Slow transition effect */
+  transition: opacity 1s ease-in-out; /* Smooth fade effect */
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
+
+.carousel-item.active {
+  opacity: 1;
+  position: relative;
+}
+
 
 /* Section Headings */
 section h2 {
@@ -99,6 +110,48 @@ section {
   display: block;
   margin: 0 auto;
 }
+
+/* Modal Background */
+.image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.image-modal .modal-content {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.image-modal .close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  bottom: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Modal Image */
+.image-modal img {
+  object-fit: contain;
+  max-height: 90vh;
+}
+
 
 /* Contact Section */
 .contact-section {
