@@ -62,9 +62,8 @@ body {
   object-fit: cover;
 }
 .carousel-item {
-  transition: transform 1.5s ease-in-out; /* Slow transition effect */
+  transition: opacity 1s ease-in-out; /* Slow transition effect */
 }
-
 
 /* Section Headings */
 section h2 {
@@ -91,11 +90,17 @@ section {
   opacity: 1;
 }
 
-
-.modal-body img {
-  max-height: 90vh; /* Prevents image from exceeding screen height */
-  object-fit: contain;
+/* Modified Gallery Preview Modal - Using Bootstrap Modal */
+/* This rule applies to the image inside your modal (id="fullImage") */
+#fullImage {
+  max-width: 100%;
+  max-height: 90vh; /* Ensures the entire image fits within 90% of the viewport height */
+  object-fit: contain; /* Scales down the image to show the complete image */
+  display: block;
+  margin: 0 auto;
 }
+
+/* Contact Section */
 .contact-section {
   padding: 50px 20px;
   background-color: #f8f9fa;
@@ -116,7 +121,6 @@ section {
 .social-links a:hover {
   text-decoration: underline;
 }
-
 
 /* Footer Styling */
 footer {
