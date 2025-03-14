@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar Styling */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.nav-link {
+  margin-right: 1rem;
+}
+
+/* Default Light Mode */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --nav-bg: #f8f9fa;
+  --btn-bg: #000;
+  --btn-text: #fff;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --nav-bg: #333;
+  --btn-bg: #ffffff;
+  --btn-text: #000;
+}
+
+/* Apply Theme */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.navbar {
+  background-color: var(--nav-bg) !important;
+}
+
+.btn-outline-dark {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-color: var(--btn-bg);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--btn-text);
+  color: var(--btn-bg);
+}
+
+/* Hero Carousel */
+.carousel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.carousel-item {
+  transition: transform 1.5s ease-in-out; /* Slow transition effect */
+}
+
+
+/* Section Headings */
+section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Padding for Sections */
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Lazy Loading for Gallery - Smooth Fade-in Effect */
+.gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-img.loaded {
+  opacity: 1;
+}
+
+
+.modal-body img {
+  max-height: 90vh; /* Prevents image from exceeding screen height */
+  object-fit: contain;
+}
+.contact-section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.social-links a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #007bff;
+  margin: 0 10px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* Footer Styling */
+footer {
+  background-color: #222;
+  color: #ccc;
+}
